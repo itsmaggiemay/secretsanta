@@ -6,3 +6,4 @@ class User < ActiveRecord::Base
   belongs_to :exchange
   has_many :wishlists
 end
+

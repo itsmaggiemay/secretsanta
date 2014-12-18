@@ -16,7 +16,6 @@ a{
 }
 
 
-
 h1 {
    -webkit-text-stroke: 0px black;
    color: red;
@@ -26,4 +25,47 @@ h1 {
       1px -1px 0 #Fff,
       -1px 1px 0 #Fff,
        1px 1px 0 #Fff;
+}
+
+section#users {
+	width: 750px;
+	height: 100%;
+	margin: 0 auto;
+}
+.user {
+	height: 180px;
+	width: 500px;
+	border: 2px solid red;
+	background-color: rgba(255,255,255, .8);
+	margin: 10px auto;
+}
+
+button, input, textarea {
+	width: 150px;
+	height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	border: 2px solid green;
+}
+button.edit {
+	background-color: mediumseagreen;
+	color: cornsilk;
+}
+button.delete {
+	color: white;
+	background-color: indianred;
+}
+p.author {
+	color: indianred;
+	font-size: 18px;
+}
+
+p.content {
+	color: cornflowerblue;
+	font-weight: 400;
+}
+.user-form {
+	width: 300px;
+	margin: 0 auto;
 }
