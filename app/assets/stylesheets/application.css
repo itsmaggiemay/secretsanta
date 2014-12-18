@@ -1,16 +1,29 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url(http://fonts.googleapis.com/css?family=Mountains+of+Christmas);
 
+body{
+	background-image: url('http://www.americasbestinnportsmouth.com/wp-content/uploads/2013/10/Decorated-Christmas-Tree.jpg');
+	background-repeat: no-repeat;
+	text-align: center;
+	font-family: 'Mountains of Christmas', cursive;
+	font-size: 16px;
+	color: #a51515;
+
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+h1 {
+   -webkit-text-stroke: 0px black;
+   color: red;
+   text-shadow:
+       3px 3px 0 #Fff,
+     -1px -1px 0 #Fff,  
+      1px -1px 0 #Fff,
+      -1px 1px 0 #Fff,
+       1px 1px 0 #Fff;
+}
