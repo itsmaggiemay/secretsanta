@@ -34,57 +34,7 @@
 	<br><br>
 
 
-<!-- FORM -->
-<div class ="party_container">
-<div ng-controller="eventController" ng-cloak="ng-cloak">
-  <section class="details">
-    <div class="container">
-      <form role="form" name="detailsForm" id="detailsForm" novalidate="novalidate" class="details__form">
-        <h2 class="details__title">Party details</h2>
-        <div class="form-group col-xs-12 col-sm-5 col-md-6">
-          <label class="event__label">Party organiser name</label>
-          <div class="control-group input-append">
-            <input type="text" name="organiserName" id="organiserName" class="main_input_fields"/>
-          </div>
-        </div>
-        <div class="form-group col-xs-12 col-sm-7 col-md-6">
-          <label class="event__label">Party organiser email</label>
-          <div class="control-group col-xs-12">
-            <input type="email" ng-model="event.organiser.email" required="required" name="organiserEmail" ng-change="checkOrganiser(detailsForm)" id="organiserEmail" class="main_input_fields"/>
-          </div>
-        </div>
-        <div class="form-group col-xs-12">
-          <label class="event__label">Party title</label>
-          <div class="control-group col-xs-12">
-            <input type="text" ng-model="event.title" class="main_input_fields"/>
-          </div>
-        </div>
-        <div class="form-group col-xs-12 col-sm-5 col-md-6">
-          <label class="event__label">Pick your date</label>
-          <div class="control-group input-append">
-            <div class="input-group">
-              <input type="text" ng-model="event.date" data-date-format="dd/mm/yyyy" bs-datepicker="bs-datepicker" class="form-control event__input"/><span class="input-group-addon"><i class="icon icon--calendar"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="form-group col-xs-12 col-sm-7 col-md-6">
-          <label ng-cloak="ng-cloak" class="event__label">Amount of cash to spend: &euro;/$&nbsp;{{ event.cashAmount }}</label>
-          <div class="slider-wrap">
-            <div ui-slider="slider.options" min="0" max="100" step="1" ng-model="event.cashAmount" class="slider col-xs-12"></div>
-          </div>
-        </div>
-        <div class="form-group col-xs-12">
-          <label for="message" class="col-xs-12 event__label">Message</label>
-          <div class="col-xs-12">
-            <textarea id="message" name="message" ng-model="event.message" noresize="noresize" class="form-control event__input--textarea"></textarea>
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
-  
-</div>
-</div>
+
 
 
 
