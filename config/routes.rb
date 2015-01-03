@@ -1,13 +1,6 @@
 Rails.application.routes.draw do
-
-  devise_for :users
-
-  root to: 'friends#index'
-
-  resources :friends
-  #resources :friends, only: [:index, :show, :create, :update, :destroy]
-  
-
+ root 'application#index'
+  resources :users, only: [:index, :show, :create, :update, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

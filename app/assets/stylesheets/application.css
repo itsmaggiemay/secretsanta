@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Mountains+of+Christmas);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
 
 body{
 	background-image: url('http://www.americasbestinnportsmouth.com/wp-content/uploads/2013/10/Decorated-Christmas-Tree.jpg');
@@ -27,45 +28,43 @@ h1 {
        1px 1px 0 #Fff;
 }
 
-section#users {
-	width: 750px;
-	height: 100%;
-	margin: 0 auto;
-}
-.user {
-	height: 180px;
-	width: 500px;
-	border: 2px solid red;
-	background-color: rgba(255,255,255, .8);
-	margin: 10px auto;
+h2 {
+	font-family: 'Lobster', cursive;
+	color: #fff;
 }
 
-button, input, textarea {
-	width: 150px;
-	height: 30px;
-	text-align: center;
-	border-radius: 5px;
-	margin-bottom: 10px;
-	border: 2px solid green;
-}
-button.edit {
-	background-color: mediumseagreen;
-	color: cornsilk;
-}
-button.delete {
-	color: white;
-	background-color: indianred;
-}
-p.author {
-	color: indianred;
-	font-size: 18px;
+h3 {
+	font-family: 'Arial';
+	font-size: 30px;
+	color: #000;
 }
 
-p.content {
-	color: cornflowerblue;
-	font-weight: 400;
+.event__label{
+	color: limegreen;
+	font-family: 'Arial';
 }
-.user-form {
-	width: 300px;
-	margin: 0 auto;
+
+
+/*SANTA WALKING*/
+
+.left {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
 }
+.right {
+        -moz-transform: scaleX(1);
+        -o-transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+
+
+
+

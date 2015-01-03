@@ -13,35 +13,146 @@
 
 <!-- SNOW FALL JS -->
 <script src="snowstorm.js"></script>
-<script src="friend.js"></script>
+
 
 
 </head>
 <body>
 
   <header>
-    <h1>SECRET SANTA</h1>
+   <h1>Secret Santa List Generator</h1>
   </header>
 
 
+<h2>
+		Santa needs your help! The elves are overwhelmed at the workshop<br>
+		and fears he is unable to deliver the presents in time. Can you please<br>
+		help him? Fill in the forms below with the information about your<br>
+		Secret Santa Exchange Party. We will take care who you are suppose to buy<br>
+		presents for!
+	</h2>
+	<br><br>
 
 
-<p class="navbar-text pull-right">
-  <% if user_signed_in? %>
-   Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-  <% else %>
-   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-  <% end %>
-</p>
+<!-- FORM -->
+<div class ="party_container">
+<div ng-controller="eventController" ng-cloak="ng-cloak">
+  <section class="details">
+    <div class="container">
+      <form role="form" name="detailsForm" id="detailsForm" novalidate="novalidate" class="details__form">
+        <h2 class="details__title">Party details</h2>
+        <div class="form-group col-xs-12 col-sm-5 col-md-6">
+          <label class="event__label">Party organiser name</label>
+          <div class="control-group input-append">
+            <input type="text" name="organiserName" id="organiserName" class="main_input_fields"/>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-7 col-md-6">
+          <label class="event__label">Party organiser email</label>
+          <div class="control-group col-xs-12">
+            <input type="email" ng-model="event.organiser.email" required="required" name="organiserEmail" ng-change="checkOrganiser(detailsForm)" id="organiserEmail" class="main_input_fields"/>
+          </div>
+        </div>
+        <div class="form-group col-xs-12">
+          <label class="event__label">Party title</label>
+          <div class="control-group col-xs-12">
+            <input type="text" ng-model="event.title" class="main_input_fields"/>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-5 col-md-6">
+          <label class="event__label">Pick your date</label>
+          <div class="control-group input-append">
+            <div class="input-group">
+              <input type="text" ng-model="event.date" data-date-format="dd/mm/yyyy" bs-datepicker="bs-datepicker" class="form-control event__input"/><span class="input-group-addon"><i class="icon icon--calendar"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-7 col-md-6">
+          <label ng-cloak="ng-cloak" class="event__label">Amount of cash to spend: &euro;/$&nbsp;{{ event.cashAmount }}</label>
+          <div class="slider-wrap">
+            <div ui-slider="slider.options" min="0" max="100" step="1" ng-model="event.cashAmount" class="slider col-xs-12"></div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12">
+          <label for="message" class="col-xs-12 event__label">Message</label>
+          <div class="col-xs-12">
+            <textarea id="message" name="message" ng-model="event.message" noresize="noresize" class="form-control event__input--textarea"></textarea>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+</div>
+</div>
+
+
+
+
+	
+	<div class="row_containers">
+		<div class="row">
+      <h3>ADD SECRET SANTAS</h3>
+			<input type="text" class="participant_name" placeholder='ENTER FULL NAME'/>
+
+			<input type="text" class="participant_email" placeholder='EMAIL'/>
+			<a href="#" class="add_name">Add name</a>
+		</div> <!-- .row -->
+	</div> <!-- ./row_containers -->
+
+	<a href="#" id="submitNames">Submit</a>
+
+	<br>
+
+
+
 
 <div class="container">
 
   <%= yield %>
 
 </div>
+
+<!-- REINDEER MOVING -->
+<div id="animatedImage" style="position:fixed;padding-top:550px;z-index:99;left:1px;bottom:1px;">
+
+ <!-- <img id="img1" src="http://www.netanimations.net/Animated_santa_reindeer_flying.gif" alt="animatedImage" /> -->
+ <img id="img1" src="https://33.media.tumblr.com/01e7b577cebeba1cc3f3bdcb0e8d54a3/tumblr_nf7qxyWhJ31tcl6yio1_500.gif" alt="animatedImage" style="height: 120px" />
+
+ <img id="img1" src="https://38.media.tumblr.com/80a93f18b4349c45d30bc70d2b87b594/tumblr_mfm5okRpKT1rgpyeqo1_250.gif" alt="animatedImage" style="height: 120px" />
+
+ <img id="img1" src="https://33.media.tumblr.com/01e7b577cebeba1cc3f3bdcb0e8d54a3/tumblr_nf7qxyWhJ31tcl6yio1_500.gif" alt="animatedImage" style="height: 120px" />
+</div>
+<script>
+var distanceBall=0; 
+var directionBall=1; 
+document.getElementById('animatedImage').style.top = 10;
+document.getElementById('animatedImage').style.left = 10;
+var timerToggle=null; 
+animateBall();
+var setting = 0;          
+
+  function animateBall() {   
+  document.getElementById("animatedImage").style.left=distanceBall + "px";
+  
+  distanceBall+=directionBall;
+
+  if (distanceBall>window.screen.width -70) { 
+  document.getElementById('animatedImage').style.top = 10;
+  document.getElementById('animatedImage').style.left = 10;
+  directionBall = -1;
+  document.getElementById('img1').className = 'left';
+  }
+
+  if (distanceBall<0) {
+  directionBall = 1;
+  document.getElementById('img1').className = 'right';
+  }
+
+  timerToggle=setTimeout(function() { animateBall(); }, 0.1);
+  }
+</script>
+<embed src="audio/xmas.mp3" autostart="true" loop="true" hidden="true">
 
 </body>
 </html>
