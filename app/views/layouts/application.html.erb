@@ -5,6 +5,8 @@
 
   <!-- Little Icon On Tab -->
   <link rel="shortcut icon" type="image/png" href="http://www.woodus.com/den/gallery/graphics/dq9ds/head/santas_hat.png">
+  <link href="normalize.css" rel="stylesheet" type="text/css">
+  <link href="skeleton.css" rel="stylesheet" type="text/css">
 
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -20,19 +22,21 @@
 <body>
 
   <header>
-   <h1>Secret Santa List Generator</h1>
+   <h1>Santa Help.R</h1>
   </header>
 
 
-<h2>
-		Santa needs your help! The elves are overwhelmed at the workshop<br>
-		and fears he is unable to deliver the presents in time. Can you please<br>
-		help him? Fill in the forms below with the information about your<br>
-		Secret Santa Exchange Party. We will take care who you are suppose to buy<br>
-		presents for!
-	</h2>
-	<br><br>
 
+		<div class = "website_note">
+    Santa needs your help! The elves are overwhelmed at the workshop
+		and fears he is unable to deliver the presents in time. Can you please
+		help him? Fill in the forms below with the information about your
+		Secret Santa Exchange Party. We will take care who you are suppose to buy
+		presents for!
+    </div>
+	
+	<br><br>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 
 
@@ -40,17 +44,37 @@
 
 
 	
-	<div class="row_containers">
-		<div class="row">
-      <h3>ADD SECRET SANTAS</h3>
-			<input type="text" class="participant_name" placeholder='ENTER FULL NAME'/>
+<div class="party_containers">
+  <div class="party">
+    <h3>Party Deets</h3>
+    PARTY ORGANISER NAME<input type="text" class="organiser_name" placeholder="NAME OF ORGANIZER" />
+    PARTY ORGANISER EMAIL<input type="email" class="organiser_email" placeholder="EMAIL OF ORGANIZER" /><Br>
+    PARTY NAME<input type="text" class="party_name" placeholder="PARTY NAME" />
+    DATE OF PARTY <input type="date">
+    
+    <label for="fader">PRICE OF GIFT</label>
+    <input type="range" min=0 max=100 value=0 id="fader" step=1 onchange="outputUpdate(value)">
+    <output for="fader" id="price">0</output>
 
-			<input type="text" class="participant_email" placeholder='EMAIL'/>
-			<a href="#" class="add_name">Add name</a>
-		</div> <!-- .row -->
-	</div> <!-- ./row_containers -->
+  <br>
+    MESSAGE <textarea cols="80" rows="10" placeholder="Enter a message"></textarea>
+  
+  </div><!-- .party  -->
+</div> <!--./party_containers -->
 
-	<a href="#" id="submitNames">Submit</a>
+
+ <h3>ADD SECRET SANTAS</h3>
+  <div class="row_containers">
+    <div class="row">
+   
+      <input type="text" class="participant_name" placeholder='ENTER FULL NAME'/>
+
+      <input type="text" class="participant_email" placeholder='EMAIL'/>
+      <a href="#" class="add_name">Add name</a>
+    </div> <!-- .row -->
+  </div> <!-- ./row_containers -->
+
+  <a href="#" id="submitNames">Submit</a>
 
 	<br>
 

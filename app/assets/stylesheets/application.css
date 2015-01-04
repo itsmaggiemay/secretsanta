@@ -26,16 +26,29 @@ h1 {
       1px -1px 0 #Fff,
       -1px 1px 0 #Fff,
        1px 1px 0 #Fff;
+  font-family: 'Lobster';
+  font-size: 80px;
 }
 
-h2 {
+.website_note {
 	font-family: 'Lobster', cursive;
 	color: #fff;
+  text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  width: 50%;
+  border: 1px red solid;
+  margin-left: 450px;
+  font-size: 30px;
 }
 
+
 h3 {
-	font-family: 'Arial';
-	font-size: 30px;
+	font-family: 'Lobster';
+	font-size: 40px;
 	color: #000;
 }
 

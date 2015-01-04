@@ -11,4 +11,6 @@ class ApplicationController < ActionController::Base
   	 #heres the layout do what you want with is, not sending anything else,
   	 # aka <%=yield%>
   end
+
+
 end

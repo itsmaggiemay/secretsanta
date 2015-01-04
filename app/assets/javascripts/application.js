@@ -75,7 +75,11 @@
 
 			return shuffledListOfParticipants;
 		};
-	
+
+// for slider
+function outputUpdate(vol) {
+document.querySelector('#price').value = vol;
+}
 
 
 		$(function() {
@@ -92,12 +96,39 @@
 				$('input.participant_name').each(function() {
 					var participant_name = $(this).val();
 					participants.push(participant_name);
-				});
-
+			});
 				var poolOfPossibleParticipants = randomizePoolOfPossibleParticpants(participants);
 				var partnersList = matchUpPeopleAndPartners(participants, poolOfPossibleParticipants);
 				var output = JSON.stringify(partnersList);
 				console.log( output );
+				
+
+				$.ajax({
+					type: "POST",
+					url: "https://mandrillapp.com/api/1.0/messages/send.json",
+					data: {
+						'key': 'apikey',
+						'message': {
+						'from_email': 'mmh332@nyu.edu',
+						'to': [
+							{
+								'email': 'mmh332nyu@gmail.com',
+								'name': 'margaret',
+								'type': 'to'
+							},
+							{
+								'email': 'cesar.estelar@gmail.com',
+								'name': 'Cesar',
+								'type': 'to'
+							}
+							],
+						'autotext': 'true',
+						'subject': 'DOES THIS WORK?????',
+						'html': '<img src="http://3.bp.blogspot.com/-QBRuVpI-KyM/UNRFO0oZJBI/AAAAAAAAA5k/cbl8BRF01UM/s640/christomise.png"><br><h1>Happy Holidays! </h1>'
+						}
+					}
+					}).done(function(response) {
+					console.log(response); // if you're into that sorta thing
+				});
 			});
-		});
-	
+			});
