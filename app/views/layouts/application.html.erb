@@ -28,12 +28,48 @@
    <h1>Santa Help.R</h1>
   </header>
 
+<!-- REINDEER MOVING -->
+<div id="animatedImage" style="position:fixed;padding-top:550px;z-index:99;left:1px;bottom:1px;">
 
+ <!-- <img id="img1" src="http://www.netanimations.net/Animated_santa_reindeer_flying.gif" alt="animatedImage" /> -->
+ <img id="img1" src="https://33.media.tumblr.com/01e7b577cebeba1cc3f3bdcb0e8d54a3/tumblr_nf7qxyWhJ31tcl6yio1_500.gif" alt="animatedImage" style="height: 120px" />
+
+ <img id="img1" src="https://38.media.tumblr.com/80a93f18b4349c45d30bc70d2b87b594/tumblr_mfm5okRpKT1rgpyeqo1_250.gif" alt="animatedImage" style="height: 120px" />
+
+ <img id="img1" src="https://33.media.tumblr.com/01e7b577cebeba1cc3f3bdcb0e8d54a3/tumblr_nf7qxyWhJ31tcl6yio1_500.gif" alt="animatedImage" style="height: 120px" />
+</div>
+<script>
+var distanceBall=0; 
+var directionBall=1; 
+document.getElementById('animatedImage').style.top = 10;
+document.getElementById('animatedImage').style.left = 10;
+var timerToggle=null; 
+animateBall();
+var setting = 0;          
+
+  function animateBall() {   
+  document.getElementById("animatedImage").style.left=distanceBall + "px";
+  
+  distanceBall+=directionBall;
+
+  if (distanceBall>window.screen.width -70) { 
+  document.getElementById('animatedImage').style.top = 10;
+  document.getElementById('animatedImage').style.left = 10;
+  directionBall = -1;
+  document.getElementById('img1').className = 'left';
+  }
+
+  if (distanceBall<0) {
+  directionBall = 1;
+  document.getElementById('img1').className = 'right';
+  }
+
+  timerToggle=setTimeout(function() { animateBall(); }, 0.1);
+  }
+</script>
 
 		<div class = "website_note">
-    Santa needs your help! The elves are overwhelmed at the workshop
-		and fears he is unable to deliver the presents in time. Can you please
-		help him? Fill in the forms below with the information about your
+    Santa needs your help! The reindeers got the dancing bug! Santa fears he is unable to deliver the presents in time. Can you please help him? Fill in the forms below with the information about your
 		Secret Santa Exchange Party. We will take care who you are suppose to buy
 		presents for!
     </div>
@@ -90,45 +126,7 @@
 
 </div>
 
-<!-- REINDEER MOVING -->
-<div id="animatedImage" style="position:fixed;padding-top:550px;z-index:99;left:1px;bottom:1px;">
 
- <!-- <img id="img1" src="http://www.netanimations.net/Animated_santa_reindeer_flying.gif" alt="animatedImage" /> -->
- <img id="img1" src="https://33.media.tumblr.com/01e7b577cebeba1cc3f3bdcb0e8d54a3/tumblr_nf7qxyWhJ31tcl6yio1_500.gif" alt="animatedImage" style="height: 120px" />
-
- <img id="img1" src="https://38.media.tumblr.com/80a93f18b4349c45d30bc70d2b87b594/tumblr_mfm5okRpKT1rgpyeqo1_250.gif" alt="animatedImage" style="height: 120px" />
-
- <img id="img1" src="https://33.media.tumblr.com/01e7b577cebeba1cc3f3bdcb0e8d54a3/tumblr_nf7qxyWhJ31tcl6yio1_500.gif" alt="animatedImage" style="height: 120px" />
-</div>
-<script>
-var distanceBall=0; 
-var directionBall=1; 
-document.getElementById('animatedImage').style.top = 10;
-document.getElementById('animatedImage').style.left = 10;
-var timerToggle=null; 
-animateBall();
-var setting = 0;          
-
-  function animateBall() {   
-  document.getElementById("animatedImage").style.left=distanceBall + "px";
-  
-  distanceBall+=directionBall;
-
-  if (distanceBall>window.screen.width -70) { 
-  document.getElementById('animatedImage').style.top = 10;
-  document.getElementById('animatedImage').style.left = 10;
-  directionBall = -1;
-  document.getElementById('img1').className = 'left';
-  }
-
-  if (distanceBall<0) {
-  directionBall = 1;
-  document.getElementById('img1').className = 'right';
-  }
-
-  timerToggle=setTimeout(function() { animateBall(); }, 0.1);
-  }
-</script>
 <embed src="audio/xmas.mp3" autostart="true" loop="true" hidden="true">
 
 </body>
