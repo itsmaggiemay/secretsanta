@@ -1,0 +1,271 @@
+@import url(//fonts.googleapis.com/css?family=Mountains+of+Christmas:700);
+@import url(//fonts.googleapis.com/css?family=Lilita+One|Poiret+One|Dancing+Script|Coming+Soon|Love+Ya+Like+A+Sister|Lobster);
+
+/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+body{
+/*  background-image: url('../images/wallpaper.jpg');*/
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 16px;
+  color: #a51515;
+  background-color: #00aeef;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+h1 {
+   -webkit-text-stroke: 0px black;
+   color: red;
+   text-shadow:
+       3px 3px 0 #Fff,
+     -1px -1px 0 #Fff,  
+      1px -1px 0 #Fff,
+      -1px 1px 0 #Fff,
+       1px 1px 0 #Fff;
+  font-family: 'Mountains of Christmas';
+  font-size: 80px;
+}
+
+/* CENTERS THE WHOLE WEBSITE */
+#page-wrap {
+     width: 800px;
+     margin: 0 auto;
+}
+
+/* SANTA NOTE */
+.website_note {
+  font-family: 'Mountains of Christmas', cursive;
+  color: #fff;
+  width: 50%;
+  border: 1px red solid;
+  margin: 0 auto;
+  font-size: 25px;
+  padding: 20px;
+  background: #ff0030;
+  font-weight: normal;
+  line-height: 1.3em;
+  border: 2px dashed #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  text-shadow: -1px -1px #000;
+ 
+
+}
+
+
+/* EACH INPUT BOX */
+.party input {
+    border: 5px solid white;
+    border-radius: 4px; 
+    /*-webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); */
+    padding: 5px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+
+textarea {
+   border: 5px solid white;
+    border-radius: 4px; 
+    /*-webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); */
+    padding: 5px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+.row input {
+    border: 5px solid black;
+    border-radius: 4px; 
+    /*-webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); */
+    padding: 5px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+
+.add_name {
+  color: black;
+}
+
+#submitNames {
+  font-size: 40px;
+  border: 5px solid black;
+  border-radius: 4px;
+  background: rgba(255,0,0,0.5);
+  color: white;
+}
+
+/* THE TEXT IN INPUT BOX WHEN TYPING */
+input[type=text] {
+   color: green;
+}
+
+/* THE DEFAULT TEXT THAT IS THERE */
+::-webkit-input-placeholder {
+   color: rgba(0,0,0,0.5);
+   font-family: 'coming soon';
+}
+
+
+h3 {
+ -webkit-text-stroke: 0px black;
+   color: red;
+   text-shadow:
+       3px 3px 0 #Fff,
+     -1px -1px 0 #Fff,  
+      1px -1px 0 #Fff,
+      -1px 1px 0 #Fff,
+       1px 1px 0 #Fff;
+  font-family: 'Mountains of Christmas';
+  font-size: 50px;
+}
+}
+
+
+
+/*SANTA WALKING*/
+
+.left {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+.right {
+        -moz-transform: scaleX(1);
+        -o-transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+
+/* ============================================================
+  PRIMARY STRUCTURE
+============================================================ */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* ============================================================
+  SECTIONS
+============================================================ */
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h2 {
+  margin-bottom: 40px;
+  font-family: "Lobster", serif;
+  font-size: 30px;
+
+}
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+
+}
+section.module p:last-child {
+  margin-bottom: 0;
+
+
+}
+section.module.content {
+  padding: 40px 0;
+
+}
+section.module.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+section.module.parallax h1 {
+   -webkit-text-stroke: 0px black;
+   color: red;
+   text-shadow:
+       3px 3px 0 #Fff,
+     -1px -1px 0 #Fff,  
+      1px -1px 0 #Fff,
+      -1px 1px 0 #Fff,
+       1px 1px 0 #Fff;
+  font-family: 'Mountains of Christmas';
+  font-size: 80px;
+
+}
+
+
+section.module.parallax-1 {
+  background-image: url("http://i.imgur.com/poS3UD7.gif");
+  background-size: 600px 500px;
+  background-repeat: no-repeat;
+  background-color: #00aeef;
+
+
+}
+section.module.parallax-2 {
+  background-image: url("http://i.imgur.com/wsLkr6Q.gif");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-color: #2db9cd;
+
+}
+section.module.parallax-3 {
+  background-image: url("http://i.imgur.com/9Yvg1gf.gif");
+  background-size: 30%;
+  background-color: #ef4136;
+  background-position: bottom;
+
+}
+
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+
+  }
+  section.module p {
+    font-size: 20px;
+  }
+  section.module.parallax h1 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 160px;
+  }
+}
+
