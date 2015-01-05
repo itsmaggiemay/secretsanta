@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Secret Santa</title>
+  <title>Elfst.R</title>
 
   <!-- Little Icon On Tab -->
   <link rel="shortcut icon" type="image/png" href="http://www.woodus.com/den/gallery/graphics/dq9ds/head/santas_hat.png">
 
-  <link href="normalize.css" rel="stylesheet" type="text/css">
-  <link href="skeleton.css" rel="stylesheet" type="text/css">
+<!--   <link href="normalize.css" rel="stylesheet" type="text/css">
+  <link href="skeleton.css" rel="stylesheet" type="text/css"> -->
 
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -23,63 +23,97 @@
 <body>
 
   <header>
+    <section class="module parallax parallax-1">
+    <div class="container">
+
    <h1>Elfst.R</h1>
+
+    </div>
+    </section>
+
   </header>
 
-
+<section class="module content">
+    <div class="container">
 
 		<div class = "website_note">
-    Santa needs your help! The reindeers got the dancing bug! Santa fears he is unable to deliver the presents in time. Can you pleasehelp him? Fill in the forms below with the information about your
+    SANTA IS ON VACATION and the reindeers got the dancing bug! The elves are busy making toys and they need your help. Can you please help them? Fill in the forms below with the information about your
 		Secret Santa Exchange Party. We will take care who you are suppose to buy
 		presents for!
     </div>
 	
+  </div>
+
+</section>
 	<br><br>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 
 
 
+<section class="module parallax parallax-2">
 
-
-	
+<div class="container">
+  <br><br><Br>
 <h3>Party Deets</h3>
-<div class="party_containers">
+
+
+<section class="module content">
+    <div class="container">
+
+ <div class="party_containers">
   <div class="party">
  
-    PARTY ORGANIZER NAME<input type="text" class="organizer_name" placeholder="NAME OF ORGANIZER" />
-    PARTY NAME<input type="text" class="party_name" placeholder="PARTY NAME" /><br>
+    PARTY ORGANIZER NAME <input type="text" class="organizer_name" placeholder="NAME OF ORGANIZER" />
+    PARTY NAME <input type="text" class="party_name" placeholder="PARTY NAME" /><br>
     DATE OF PARTY <input type="date" class="party_date">
     
     BUDGET PRICE OF GIFT<input type="text" class="budget" value="$"/>
 
   <br>
-    MESSAGE <textarea cols="80" rows="10" class="message" placeholder="Enter a message"></textarea>
+    MESSAGE <textarea cols="80" rows="10" class="message" placeholder="Enter a message"></textarea><br><br>
+  
   
   </div><!-- .party  -->
 </div> <!--./party_containers -->
 
+</div><!-- .container  -->
+</section><!-- .module content  -->
 
+ </div><!-- .module parallax parallax-2 -->
+</section><!-- .container  -->
+
+<section class="module parallax parallax-3">
+  <div class="container">
+<br><br><br>
  <h3>Add Secret Santas</h3>
+<!--   </div>
+</section> -->
+
+<section class="module content">
+  <div class="container">
   <div class="row_containers">
     <div class="row">
    
       <input type="text" class="participant_name" placeholder='ENTER FULL NAME'/>
 
       <input type="text" class="participant_email" placeholder='EMAIL'/>
-      <a href="#" class="add_name">Add name</a>
+      <a href="#" class="add_name">ADD SECRET SANTA</a>
     </div> <!-- .row -->
   </div> <!-- ./row_containers -->
+<br><br><br>
+  <a href="#" id="submitNames">SUBMIT</a>
 
-  <a href="#" id="submitNames">Submit</a>
+  </div>
+</section>
+  </div>
+</section>
 
 
-	<br>
 
 
 
-
-<div class="container">
+<div class="containerd">
 
   <%= yield %>
 
@@ -127,7 +161,13 @@ var setting = 0;
   timerToggle=setTimeout(function() { animateBall(); }, 23);
   }
 </script>
-<embed src="audio/pentatonix.mp3" autostart="true" loop="true" hidden="true">
+
+  <embed src="audio/pentatonix.mp3" autostart="true" loop="true"
+width="2" height="0">
+</embed>
+<noembed>
+<bgsound src="audio/pentatonix.mp3" loop="infinite">
+</noembed>
 
 </body>
 </html>
