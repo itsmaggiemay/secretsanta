@@ -138,7 +138,7 @@ for (var ii = 0, max = participants.length; ii < max; ii++) {
 					url: "https://mandrillapp.com/api/1.0/messages/send.json",
 					data: {
 		
-						'key': MANDRILL_PASSWORD,
+						'key': "keywillbeincluded",
 						'message': {
 						'from_email': 'mmh332@nyu.edu',
 						"from_name": "ELFST.R",
@@ -150,8 +150,8 @@ for (var ii = 0, max = participants.length; ii < max; ii++) {
 							}
 							],
 						'autotext': 'true',
-						'subject': 'Secret Santa Exchange',
-						'html': "<img src='http://i.imgur.com/UHCtxpG.jpg'><br><br> Dear <strong>" +  partnersList[ii].person.name + "</strong><br> The reindeer have caught the dancing bug and will not be able to deliver presents this year. Will you please help me out?<br><br> My elves told me you will be going to a Christmas Party titled <strong>'" + partyInformation[0].party_name + "'</strong> on <strong>" + partyInformation[0].date_of_party	+ "</strong> . Could you please buy a present for <strong>"	+ partnersList[ii].partner.name + "</strong>? The maximum amount of money to spend is <strong> " + partyInformation[0].budget + "</strong>. <br><br> The party's organizer <strong>" + partyInformation[0].organizer_name + "</strong>, also left you a special note: <br>" + partyInformation[0].special_message + "<br><Br> I will be very grateful if you could be <strong>" + partnersList[ii].partner.name + "'s</strong> secret Santa this year. <br><br> Thanks!!!<br><Br> <img src='http://i.imgur.com/SEOnTiw.png'>"
+						'subject': 'The ' + partyInformation[0].party_name + ' Exchange',
+						'html': "<img src='http://i.imgur.com/EIvQUjK.jpg' width='800' height='376'><p style='font-family:courier; font-size: 15px'><br><br> Dear <strong>" +  partnersList[ii].person.name + ",<br></strong><br> The reindeer have caught the dancing bug and will not be able to deliver presents this year.<br> Will you please help me out?<br><br> My elves told me you will be going to a Christmas Party titled <strong>'" + partyInformation[0].party_name + "'</strong> on <strong>" + partyInformation[0].date_of_party	+ "</strong> . <br>Could you please buy a present for <strong>"	+ partnersList[ii].partner.name + "</strong>? The maximum amount of money to spend is <strong> " + partyInformation[0].budget + "</strong>. <br><br> The party's organizer <strong>" + partyInformation[0].organizer_name + "</strong>, also left you a special note: <br>" + partyInformation[0].special_message + "<br><Br> I will be very grateful if you could be <strong>" + partnersList[ii].partner.name + "'s</strong> secret Santa this year. <br><br> Thanks!!!<br><Br> <img src='http://i.imgur.com/SEOnTiw.png'></p>"
 						}
 					}
 					}).done(function(response) {
