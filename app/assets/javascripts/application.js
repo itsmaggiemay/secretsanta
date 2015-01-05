@@ -138,7 +138,7 @@ for (var ii = 0, max = participants.length; ii < max; ii++) {
 					url: "https://mandrillapp.com/api/1.0/messages/send.json",
 					data: {
 		
-						'key': ENV['MANDRILL_PASSWORD'],
+						'key': MANDRILL_PASSWORD,
 						'message': {
 						'from_email': 'mmh332@nyu.edu',
 						"from_name": "ELFST.R",
