@@ -229,7 +229,7 @@ section.module.parallax h1 {
 
 
 section.module.parallax-1 {
-  background-image: url("../images/chillinsanta.gif");
+  background-image: url("http://i.imgur.com/poS3UD7.gif");
   background-size: 600px 500px;
   background-repeat: no-repeat;
   background-color: #00aeef;
@@ -237,14 +237,14 @@ section.module.parallax-1 {
 
 }
 section.module.parallax-2 {
-  background-image: url("../images/santahammock.gif");
+  background-image: url("http://i.imgur.com/wsLkr6Q.gif");
   background-size: 800px 600px;
   background-repeat: no-repeat;
   background-color: #2db9cd;
 
 }
 section.module.parallax-3 {
-  background-image: url("../images/sleepingsanta.gif");
+  background-image: url("http://i.imgur.com/9Yvg1gf.gif");
   background-size: 30%;
   background-color: #ef4136;
   background-position: bottom;
