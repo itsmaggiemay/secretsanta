@@ -43,26 +43,24 @@
 
 
 	
+<h3>Party Deets</h3>
 <div class="party_containers">
   <div class="party">
-    <h3>Party Deets</h3>
-    PARTY ORGANISER NAME<input type="text" class="organiser_name" placeholder="NAME OF ORGANIZER" />
-    PARTY ORGANISER EMAIL<input type="email" class="organiser_email" placeholder="EMAIL OF ORGANIZER" /><Br>
-    PARTY NAME<input type="text" class="party_name" placeholder="PARTY NAME" />
-    DATE OF PARTY <input type="date">
+ 
+    PARTY ORGANIZER NAME<input type="text" class="organizer_name" placeholder="NAME OF ORGANIZER" />
+    PARTY NAME<input type="text" class="party_name" placeholder="PARTY NAME" /><br>
+    DATE OF PARTY <input type="date" class="party_date">
     
-    <label for="fader">PRICE OF GIFT</label>
-    <input type="range" min=0 max=100 value=0 id="fader" step=1 onchange="outputUpdate(value)">
-    <output for="fader" id="price">0</output>
+    BUDGET PRICE OF GIFT<input type="text" class="budget" value="$"/>
 
   <br>
-    MESSAGE <textarea cols="80" rows="10" placeholder="Enter a message"></textarea>
+    MESSAGE <textarea cols="80" rows="10" class="message" placeholder="Enter a message"></textarea>
   
   </div><!-- .party  -->
 </div> <!--./party_containers -->
 
 
- <h3>ADD SECRET SANTAS</h3>
+ <h3>Add Secret Santas</h3>
   <div class="row_containers">
     <div class="row">
    
@@ -74,6 +72,7 @@
   </div> <!-- ./row_containers -->
 
   <a href="#" id="submitNames">Submit</a>
+
 
 	<br>
 
